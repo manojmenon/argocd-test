@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: nginx-custom
+      annotations:
+        checksum/config: "{{ randAlphaNum 5 }}"
     spec:
       containers:
       - name: nginx
